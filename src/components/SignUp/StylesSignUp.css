@@ -1,12 +1,7 @@
 .Container{
     min-height: 692px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
     z-index: 0;
-    overflow: hidden;
+    
     background: linear-gradient(
       108deg,
       rgb(4, 5, 5) 0%,
@@ -18,20 +13,12 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  
-
-
+    justify-content: center; 
 }
 
 .Icon{
-  margin-top: 32px;
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 32px;
-  width: 16%;
-
+  width: 22%;
 }
 
 .FormContent{
@@ -39,69 +26,87 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
-
 }
 
 .Form{
-    background-color: #4e4c4c;
-    max-width: 400px;
-    height: auto;
-    width: 100%;
+    background-color: #4e5050;
     z-index: 1;
     display: grid;
-    margin: 0 auto;
-    padding: 80px 32px;
+    margin: 50px auto;
+    padding: 40px 50px;
     border-radius:4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-
-
-
 }
 
 .FormH1{
-    margin-bottom: 40px;
     color: #fff;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 36px;
+    font-family: Garamond, serif;
     text-align: center;
 }
 
-.FormLabel{
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
+.input-box {
+    margin: 10px auto;
+    padding-right: 50px;
+    width: 80%;
+    position: relative;
+    box-shadow: 0 8px 10px -10px rgb(0,0,0);
 }
 
-.FormInput
-{
-    padding: 16px 16px;
-    margin-bottom: 32px;
-    border-radius: 4px;
-}
-
-.FormButton
-{
-    background: #01bf71;
-    padding: 16px 0;
+.input-box input {
+    width: 100%;
+    height: 40px;
     border: none;
-    border-radius: 4px;
+    background: #efefef;
+    padding-left: 50px;
+}
+
+.Form span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 42px;
+    width: 40px;
+    background: linear-gradient(to right, #810c68, #1b1b1b);
+}
+
+span .fas {
+    padding: 12px;
     color: #fff;
-    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    margin: 10px auto;
+    display: block;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    background: linear-gradient(to right, #810c68, #1b1b1b);
+    box-shadow: 0 8px 10px -10px rgb(0,0,0);
     cursor: pointer;
+}
+.fa-sign-in-alt {
+    margin-right: 10px;
 }
 
 .FormButton:hover{
-    background: #bf01a6;
+    background: #810c68;
 
 }
 
-.Text{
-    text-align: center;
-margin-top: 24px;
-color: #fff;
-font-size: 14px;
+.user-icon{
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+}
+
+p{
+    color: #fff;
 }
 
 @media screen and (max-width: 480px) {
