@@ -1,51 +1,60 @@
-.Container{
+.Main{
     min-height: 692px;
     z-index: 0;
-    
-    background: linear-gradient(
-      108deg,
-      rgb(4, 5, 5) 0%,
-      rgb(27, 29, 28) 100%
-    );
 }
 
-.FormWrap{
-    height: 100%;
+.Main:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:linear-gradient(
+     180deg, rgba(0,0,0,0.2) 0%,
+     rgba(0,0,0,0.6) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+    z-index:1;
+  }
+
+.Main .FormWrap{
     display: flex;
     flex-direction: column;
     justify-content: center; 
 }
 
-.Icon{
+.FormWrap .Icon{
   text-decoration: none;
   width: 22%;
+  position: relative;
+  z-index: 1;
 }
 
-.FormContent{
+.FormWrap .FormContent{
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.Form{
+.FormContent .Form{
     background-color: #4e5050;
     z-index: 1;
     display: grid;
-    margin: 50px auto;
+    margin: 60px auto;
     padding: 40px 50px;
     border-radius:4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
-.FormH1{
+.Form .FormH1{
     color: #fff;
     font-size: 36px;
     font-family: Garamond, serif;
     text-align: center;
 }
 
-.input-box {
+.Form .input-box {
     margin: 10px auto;
     padding-right: 50px;
     width: 80%;
@@ -53,15 +62,14 @@
     box-shadow: 0 8px 10px -10px rgb(0,0,0);
 }
 
-.input-box input {
-    width: 100%;
+.Form .input-box input {
     height: 40px;
     border: none;
     background: #efefef;
-    padding-left: 50px;
+    padding-left: 60px;
 }
 
-.Form span {
+.Form .input-box span {
     position: absolute;
     left: 0;
     top: 0;
@@ -70,12 +78,12 @@
     background: linear-gradient(to right, #810c68, #1b1b1b);
 }
 
-span .fas {
+.Form .input-box .fas {
     padding: 12px;
     color: #fff;
 }
 
-button {
+.FormButton {
     width: 100%;
     height: 40px;
     margin: 10px auto;
@@ -88,16 +96,16 @@ button {
     box-shadow: 0 8px 10px -10px rgb(0,0,0);
     cursor: pointer;
 }
-.fa-sign-in-alt {
+.Main .fa-sign-in-alt {
     margin-right: 10px;
 }
 
-.FormButton:hover{
+.Main .FormButton:hover{
     background: #810c68;
 
 }
 
-.user-icon{
+.Main .user-icon{
     width: 120px;
     display: block;
     margin-left: auto;
@@ -105,23 +113,43 @@ button {
     margin-top: -100px;
 }
 
-p{
+.Main p{
     color: #fff;
 }
 
+.Main .HeroBg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Main .VideoBg
+{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: #232a34;
+}
+
 @media screen and (max-width: 480px) {
-    .FormWrap
+    .Main .FormWrap
     {
         height: 80%;
     }
-    .FormContent{
+    .FormWrap .FormContent{
         padding: 10px;
     }
-    .Icon{
+    .FormWrap .Icon{
         margin-left: 16px;
         margin-top: 8px;
        }
-       .Form{
+    .FormContent .Form{
         padding: 32px 32px;
     }
 }
