@@ -1,7 +1,10 @@
 import React from "react";
-import GroupCard from "./GroupCard";
+import GroupCard from "./GroupCards";
 import Image from '../../images/logo1.png';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
+
 
 function GroupSection() {
     const groups = [
@@ -55,7 +58,7 @@ function GroupSection() {
 
     return(
         <div className="container text-center">
-            <Link to='/'><img className="Icon" src={Image} width="300px" /></Link>
+            <Link to='/'><img className="Icon" src={Image} width="300px" alt="Logo"/></Link>
             <h1 className="font-weight-light text-light">
                 Tech<span className="text-info">Snap</span> Chat
             </h1>
