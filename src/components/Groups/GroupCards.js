@@ -10,8 +10,7 @@ function GroupCard(props) {
             />
             <div className="card-body">
                 <h6 className="card-title text-light">{title}</h6>
-                <button type="button" className="btn btn-sm btn-primary">Request Access <i class="fas fa-lock"></i></button>
-                <a href="/" className="stretched-link"></a>
+                <a href="/" type="button" className="btn btn-sm btn-primary">Request Access <i class="fas fa-lock"></i></a>
             </div>
         </div>
     );
