@@ -29,7 +29,7 @@ function SignUp() {
               <span><i class="fas fa-key"></i></span>
               <input className="FormInput" htmlFor='password' placeholder="Confirm Password" required />
             </div>
-            <button className="FormButton" type='submit'><i class="fas fa-sign-in-alt"></i>Sign Up</button>
+            <button className="FormButton" type='submit'><i class="fas fa-sign-in-alt"></i><Link class="WelcomeRoute" to='/welcome'>Sign Up</Link></button>
             <p>Already have an account? <Link to="/">Log In</Link> </p>
           </form>
         </div>
