@@ -34,7 +34,7 @@ function LoginIn() {
                 <input className="FormInput" htmlFor='password' placeholder="Type your Password" required />
               </div>
         
-              <button className="FormButton" type='submit'><i class="fas fa-sign-in-alt"></i>Log In</button>
+              <button className="FormButton" type='submit'><i class="fas fa-sign-in-alt"></i><Link class="WelcomeRoute" to='/welcome'>Login In</Link></button>
         
               <p>Don't have an account? <Link to="/signup">Sign Up</Link> </p>
         
