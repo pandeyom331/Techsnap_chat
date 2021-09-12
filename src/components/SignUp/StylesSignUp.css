@@ -137,6 +137,12 @@
     background: #232a34;
 }
 
+.Main .WelcomeRoute
+{
+    text-decoration: none;
+    color: #fff;
+}
+
 @media screen and (max-width: 480px) {
     .Main .FormWrap
     {
