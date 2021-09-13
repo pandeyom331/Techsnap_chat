@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./StylesSignUp.css";
 import { Link } from 'react-router-dom';
 import Image from '../../images/logo1.png';
-import Video from '../../videos/video1.mp4'
+import Video from '../../videos/video1.mp4';
 
 function SignUp() {
+
+  const [pass, setpass] = useState(true);
+  const [pass1, setpass1] = useState(true);
 
   return (
     <div className="Main">
@@ -23,11 +26,13 @@ function SignUp() {
             </div>
             <div class="input-box">
               <span><i class="fas fa-key"></i></span>
-              <input className="FormInput" htmlFor='password' placeholder="Type your Password" required />
+              <input className="FormInput" type={pass ? "password" : "text"} htmlFor='password' placeholder="Type your Password" required />
+              <icon className="eye"  onClick={() => setpass(!pass)}><i class={pass ? "far fa-eye-slash" : "far fa-eye"}></i></icon>
             </div>
             <div class="input-box">
               <span><i class="fas fa-key"></i></span>
-              <input className="FormInput" htmlFor='password' placeholder="Confirm Password" required />
+              <input className="FormInput" type={pass1 ? "password" : "text"} htmlFor='password' placeholder="Confirm Password" required />
+              <icon className="eye"  onClick={() => setpass1(!pass1)}><i class={pass1 ? "far fa-eye-slash" : "far fa-eye"}></i></icon>
             </div>
             <button className="FormButton" type='submit'><i class="fas fa-sign-in-alt"></i><Link class="WelcomeRoute" to='/welcome'>Sign Up</Link></button>
             <p>Already have an account? <Link to="/">Log In</Link> </p>
