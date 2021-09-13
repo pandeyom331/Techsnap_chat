@@ -78,6 +78,13 @@
     background: linear-gradient(to right, #810c68, #1b1b1b);
 }
 
+.Form .input-box icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 8px;
+}
+
 .Form .input-box .fas {
     padding: 12px;
     color: #fff;
