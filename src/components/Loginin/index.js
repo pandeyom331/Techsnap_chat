@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../SignUp/StylesSignUp.css";
 import { Link } from 'react-router-dom';
 import Image from '../../images/logo1.png';
 import Video from '../../videos/video1.mp4'
 
 function LoginIn() {
+
+  const [pass, setpass] = useState(true);
+
     return (
       <div className="Main">
         
@@ -31,7 +34,8 @@ function LoginIn() {
         
               <div class="input-box">
                 <span><i class="fas fa-key"></i></span>
-                <input className="FormInput" htmlFor='password' placeholder="Type your Password" required />
+                <input className="FormInput" htmlFor='password' type={pass ? "password" : "text"} placeholder="Type your Password" required ></input>
+                <icon className="eye"  onClick={() => setpass(!pass)}><i class={pass ? "far fa-eye-slash" : "far fa-eye"}></i></icon>
               </div>
         
               <button className="FormButton" type='submit'><i class="fas fa-sign-in-alt"></i><Link class="WelcomeRoute" to='/welcome'>Login In</Link></button>
