@@ -155,14 +155,35 @@
     {
         height: 80%;
     }
+    .Main .VideoBg{
+        visibility: inherit;
+    }
     .FormWrap .FormContent{
         padding: 10px;
+        justify-content: center;
+
     }
     .FormWrap .Icon{
-        margin-left: 16px;
-        margin-top: 8px;
+        justify-content: center;
+        width: 200px;
+      
        }
     .FormContent .Form{
         padding: 32px 32px;
     }
+    .FormContent .user-icon{
+        width: 90px;
+    }
+    .input-box{
+        width: 10px;
+
+    }
+   .FormButton .WelcomeRoute{
+       width: 10px;
+   }
+   .Form{
+       width: 100%;
+       margin-left: 0px;
+       padding-left: 0px;
+   }
 }
