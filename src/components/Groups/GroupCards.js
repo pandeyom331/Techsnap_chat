@@ -1,6 +1,8 @@
 import React from "react";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
+ 
 AOS.init();
 
 function GroupCard(props) {
@@ -15,7 +17,7 @@ function GroupCard(props) {
             />
             <div className="card-body">
                 <h6 className="card-title text-light">{title}</h6>
-                <a href="/" type="button" className="btn btn-sm btn-primary">Request Access <i class="fas fa-lock"></i></a>
+                <Link class="btn btn-sm btn-primary" to='/chat'>Request Access <i class="fas fa-lock"></i></Link>
             </div>
         </div>
     );
